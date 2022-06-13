@@ -1,0 +1,108 @@
+/* 
+    selectores:
+
+        Selecores simples:
+            Selectores elementales:
+                Selector universal -> *
+                Selector de tipo etiqueta -> Nombre de la etiqueta 
+            Selectores de atributo:
+                id -> Id del elemento
+                clase -> Clase del elemento
+                Otros atributos
+                    [atributo]
+                    [atributo=valor]
+                    [atribut^=valor]
+                    [atribut*=valor]
+                    [atribut$=valor]
+                    [atribut|=valor]
+        Selectores compuestos:
+            Selectores agrupados: Se agrupan los selectores separados por comas y se escribe el estilo una sola vez 
+            Selectores combinadores:
+              selector descendiente
+                selector de hermano descendiente:
+                  selector de hermano siguiente: +
+                  selector de hermanos siguientes: ~
+                  selector de hijo directo: selecciona solo los hijos directos
+            pseudoclases - Pseudoelementos:
+*/
+
+/* *{
+    background-color: lightcoral;
+}
+
+h1{
+    background-color: lightcyan;
+}
+
+p{
+    background-color: lightgreen;
+}
+
+ul{
+    background-color: lightpink;
+}
+
+li{
+    background-color: lightseagreen;
+} */
+
+/* #title {
+  background-color: lightgreen;
+}
+
+.title {
+  background-color: lightsalmon;
+}
+
+.parrafo {
+  background-color: lightslategray;
+}
+
+[href] {
+  background-color: mediumorchid;
+}
+
+[href="https://www.google.com"]
+{
+  background-color: mediumturquoise;
+}
+
+[href^="color"] {
+  background-color: salmon;
+}
+
+[href*="modo"] {
+  background-color: green;
+}
+
+[href$="azul"] {
+  background-color: skyblue;
+}
+
+[href$="azul"] {
+  background-color: skyblue;
+}
+
+[lang|="en"] {
+  background-color: magenta;
+} */
+
+/* .text-1, .text-2, .text-3, .text-4{
+  background-color: aquamarine;
+} */
+/* 
+div h2{
+  background-color: brown;
+}
+
+.title + p{
+  background-color: burlywood;
+}
+
+.title ~ p{
+  background-color: teal;
+} */
+
+.contenedor > p{
+  background-color: yellowgreen;
+}

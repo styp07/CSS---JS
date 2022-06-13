@@ -1,0 +1,142 @@
+/*
+
+    Variables: En CSS, las propiedades personalizadas (también conocidas como variables) son entidades definidas por autores de CSS que contienen valores específicos que se pueden volver a utilizar en un documento.
+
+    Su sintaxis es:
+
+        Para crear la variable:
+          --(nombre de la variable)
+        para llamar la variable:
+            var((nombre de la variable)
+
+    Ejemplo:
+
+    :root{
+        --ejemplo: orange;
+    }
+
+    body{
+        backgraund-color: var(--ejemplo);
+    }
+*/
+
+:root{
+    --fondo-principal: rgb(177, 185, 181);
+    --fondo-secundario: rgb(8, 32, 50);
+    --fondo-terciario: rgb(51, 71, 86);
+    --fondo-cuarto: rgb(44, 57, 75);
+    --fondo-quinto: rgb(255, 76, 41);
+    --color-principal: rgb(240, 240, 240);
+    --font-title: 'Poppins', sans-serif;
+    --font-p: font-family: 'Roboto', sans-serif;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--fondo-principal);
+    font-family: var(--font-title);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    background-color: var(--fondo-secundario);
+    z-index: 10;
+}
+
+.logo{
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+    margin: 0;
+    color: var(--color-principal);
+}
+
+.inicio{
+    position: absolute;
+    right: 15rem;
+    top: 1.4rem;
+    margin: 0;
+    color: var(--color-principal);
+}
+
+.profile{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 5em;
+    top: .7em;
+    border-radius: 50%;
+    background-color: var(--color-principal);
+}
+
+.box{
+    position: relative;
+    top: 18vh;
+    width: 70%;
+    height: 15rem;
+    margin: 0 auto;
+    background-color: var(--fondo-terciario);
+    font-size: 0;
+}
+
+.box__box{
+    display: inline-block;
+    position: relative;
+    width: 33.33%;
+    height: 100%;
+}
+
+.box__box--1{
+    background-color: var(--fondo-cuarto);
+}
+
+.box__box--2{
+    background-color: var(--fondo-terciario);
+}
+
+.box__box--3{
+    background-color: var(--fondo-quinto);
+}
+
+.text{
+    position: relative;
+    top: 10rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.text__title{
+    font-size: 5rem;
+    border-bottom: .2rem solid var(--fondo-cuarto);
+    color: var(--fondo-cuarto);
+}
+
+.text__p{
+    padding: 1em;
+    font-family: var(--font-p);
+    font-size: 1.5rem;
+}
+
+.footer{
+    position: relative;
+    top: 12rem;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--fondo-secundario);
+}
+
+.footer__box{
+    position: relative;
+    top: 7vh;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-principal);
+}

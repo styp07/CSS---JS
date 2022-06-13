@@ -1,0 +1,121 @@
+/* 
+
+    background: Es el fondo de un elemento.
+
+        Background color: es una propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra "transparente".
+            sintaxis: background-color: rgb(0, 0, 0);
+
+        background-image: establece una o más imágenes de fondo para un elemento.
+            sintaxis: background-image: url(""); url -> Localización de la imagen que se utilizará de fondo.
+                      background-image: none; none -> Utilizado para especificar que un elemento no debe tener ninguna imagen de fondo.
+                
+        background-size: especifica el tamaño de las imágenes de fondo.
+
+        background-repeat: define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.
+            sintaxis: background-repeat:  ;
+
+            Los valores que se le pueden asignar son:
+
+                repeat-x -> repetira la imagen en x
+                repeat-y -> repetira la imagen en y
+                repeat -> repetira la imagen en todas las direcciones
+                space-> repetira la imagen en las esquinas
+                round -> alargara un poco la imagen y la repetira en todas las direcciones
+                no-repeat -> no se repetira
+                space repeat -> repetira la imagen en la zona izquirda y derecha
+
+        
+        background-attachment: La propiedad CSS background-attachment determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor.
+            sintacis: background-attachment: ;
+
+            Los valores que se pueden asignar son:
+
+                scroll: la imagen de fondo se moverá dentro de la pantalla junto al bloque que la contiene.
+
+                fixed: la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.
+
+        background-position: define la posición inicial de la imagen de fondo especificada.
+            sintaxis: background-position: "posicion";
+
+        background es un shorthand por lo que se pueden poner todas las propiedades en una
+            sintaxis: background: color url repeat position attachment; 
+        
+        Se pueden dar mas backgrounds con "comas (,)" 
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(80, 80, 80);
+}
+
+.box{
+    display: inline-block;
+    margin: 1rem;
+    width: 15rem;
+    height: 15rem;
+    background-color: rgb(10, 10, 10);
+}
+
+
+.color{
+    background-color: rgb(25, 176, 54);
+}
+
+.image1{
+    background-image: url("../assets/WhatsApp\ Image\ 2021-08-12\ at\ 5.24.49\ PM.jpeg");
+    background-size: 15rem 20rem;
+}
+
+.image2{
+    background-image: url("../assets/WhatsApp\ Image\ 2021-08-12\ at\ 5.26.54\ PM.jpeg");
+    background-size: 15rem 15rem;
+}
+
+.repeat{
+    width: 30rem;
+    height: 30rem;
+    background-image: url("https://image.shutterstock.com/image-vector/green-succulent-aloe-agave-clay-260nw-1116401513.jpg");
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: repeat; */
+    /* background-repeat: space; */
+    /* background-repeat: round; */
+    background-repeat: no-repeat;
+}
+
+.attachment{
+    width: 30rem;
+    height: 50rem;
+    background-image: url("https://image.shutterstock.com/image-vector/green-succulent-aloe-agave-clay-260nw-1116401513.jpg");
+    /* background-attachment: fixed; */
+    /* background-attachment: local; */
+    /* background-attachment: scroll; */
+    overflow: scroll;
+}
+
+.position{
+    width: 30rem;
+    height: 30rem;
+    background-image: url("https://image.shutterstock.com/image-vector/green-succulent-aloe-agave-clay-260nw-1116401513.jpg");
+    background-repeat: no-repeat;
+    background-position: left 40px bottom 20px;
+}
+
+.background{
+    width: 30rem;
+    height: 30rem;
+    background: rgb(10, 10, 10) url("https://image.shutterstock.com/image-vector/green-succulent-aloe-agave-clay-260nw-1116401513.jpg") no-repeat center;
+}
+
+.experimento{
+    background-image: linear-gradient(
+      rgba(18, 175, 214, 0.3), 
+      rgba(255, 0, 0, 0.3)
+    ), url("../assets/WhatsApp\ Image\ 2021-08-12\ at\ 5.26.54\ PM.jpeg");
+    background-size: 15rem 15rem;
+}

@@ -1,0 +1,139 @@
+/* 
+
+    BEM
+
+        -Es una metodologia de nomenclatura para definir las clases del HTML
+        -El objetivo de BEM es dar transparencia y claridad a nuestro HTML y CSS.
+        -BEM te dice como se relacionan las clases entre ellas.
+        -Todas las clases del proyecto pueden encajar con esta filosofia.
+
+        -BEM son tres siglas 
+
+            B -> Bloque : Es una entidad independiente con significado propio 
+            E -> Elemento: Es una porcion mas pequeña del bloque.
+            M -> Modificador: Es una clase que sirve para modificar propiedades de un bloque o elemento.
+
+        -Se puede dar el caso que existan algunas clases independientes a nuesto sistema BEM en el proyecto, pero no es lo mas recomendable.
+
+        -Estas clases independientes normalmente seran generadas por plugings de terceros.
+
+*/
+
+
+:root{
+    --fondo-principal: rgb(240, 240, 250);
+    --fondo-secundario: rgb(255, 255, 255);
+    --color-primario: rgb(0, 0, 0);
+    --color-secundario: rgb(109, 109, 109);
+    --fuente-principal: 'Open Sans', sans-serif;
+    --fuente-titulo: 'Raleway', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo-principal) ;
+    font-family: var(--fuente-principal);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.contenedor{
+    max-width: 62.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    margin-bottom: 3.125rem;
+    padding: 1.25rem;
+    align-items: center;
+    background-color: var(--fondo-secundario);
+    border-radius: 1rem;
+}
+
+.card__enlace{
+    display: inline-block;
+    width: 40.625rem;
+    height: 12.5rem;
+    margin-right: 1.25rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    background-color: black;
+}
+
+.card__enlace-imagen{
+    width: 100%;
+    height: 100%;
+}
+
+.card__t-titulo{
+    font-family: var(--fuente-titulo);
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.card__t-enlace{
+    color: var(--color-primario);
+}
+
+.card__t-text{
+    margin-bottom: 1.25rem;
+    line-height: 1.75rem;
+    color: var(--color-secundario);
+}
+
+.boton{
+    display: inline-block;
+    display: inline-flex;
+    height: 3.125rem;
+    padding: 0 1.875rem;
+    min-width: 11.25rem;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6.25rem;
+    background-color: var(--color-primario);
+    background-color: rgb(64, 60, 194);
+    color: var(--fondo-secundario);
+    transition: .3 ease all;
+}
+
+.boton__title{
+    font-weight: 600;
+}
+
+.compra{
+    text-align: center;
+    margin: 8rem auto;
+}
+
+.boton:hover{
+    background-color: rgb(27, 24, 129);
+    text-decoration: none;
+}
+
+.boton--absolute{
+    position: absolute;
+    bottom: -1.5625rem;
+    right: 1.25rem;
+}
+
+.boton--verde{
+    background-color: #7ba771;
+}
+
+.boton--verde:hover{
+    background-color: #437837;
+}

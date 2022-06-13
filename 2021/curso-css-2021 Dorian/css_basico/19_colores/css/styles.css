@@ -1,0 +1,174 @@
+/* 
+
+Colores
+
+    La mayoria de las pantallas funcionan con un modo de color aditivo. La suma de RGB da como resultado un blanco.
+
+    Teneos varias formas de dar color en css:
+
+        keywords -> palabras claves que representan colores
+
+        IMPORTANTE: Existe el color transparente
+
+        currentColor: Es una palabra clave que se puede usar en lugar de cualquier valor de color y usara el valor ya sea establecido o heredado en la propiedad color.
+
+        RGB/RGBA 
+
+            En el modo RGB tenemos tres colores (red, green, blue) y tenemos 8 bits de color por canal, (cada bit tiene dos posibles valores 0 ó 1) lo que significa que tenemos 2^8 posibles valores, que van desde 0 hasta 255.
+
+            Esto nos da el total de 255 * 255* 255* = 16.581.375 colores.
+
+            Su sintaxis es rgb(R,G,B)
+
+            Si ponemos todos los canales a 0 tendremos un negro puro y si lo ponemos a 255 tendremos un blanco.
+
+            Para movernos por la gama de grises debemos poner los 3 canales a 128 tendremos el gris puro.
+
+            El modo RGB nos da la opcion de dar un cuarto canal que corresponde al canal alpha, es decir, la transparencia, y su valor va desde 0 a 1. Tenemos dos sintaxis para utilizar el valor allpha
+            
+            rgba(R,G,B,A)
+            rgb(R G B / A)
+
+        HEXADECIMAL
+
+            La notación hexadecimal es la más común en desarollo web, se basa en los mismos principios que el RGB pero escrito en notacion hexadecimal.
+
+            El sistema hexadecimal es un sistema basado en 16 valores del 0 al 15.
+            Utiliza los digitos del 0 al 9 y las letras de la A a la F.
+            
+            En este tipo de notación también necesitamos 256 valores.
+
+            Se compone de 16 caracteres en parejas ya que 16*16 = 256
+            0 1 2 3 4 5 6 7 8 9 A B C D E F 
+
+            Para indicar que vamos a utilizar notacion hexadecimal debemos usar el simbolo de hash/almohadilla # y a continuación usaremos esta notación por parejas. 
+            #RRGGBB
+
+            Cuando una pareja usa el mismo valor se puede omitir el segundo valor, siempre que se haga en las 3 parejas.
+
+            rgb(255,255,255) -> #FFFFFF -> FFF
+            rgb(0,0,0) -> #000000 -> #000
+
+            Tambien tenemos la opción de usar transparencia en hexadecimal añadiendo un cuarto canal que sigue las mismas normas.
+
+            rgb(0 0 0 / .5) -> #00000080 -> 0007
+
+        HSL / HSLA
+
+            El modo de color HSL es el más intuitivo para los humanos. Su nombre viene de las siglas Hue (tono) Saturation (saturacion) y Lightness (Luminocidad) 
+
+            El primer valor es el angulo en el circulo cromatico desde 0 y 360 sera el color rojo. Hay ciertos valores que pueden servir como referencia para relacionar mejor los colores con sus ángulos.
+
+                0 -> rojo
+                60 -> amarillo 
+                120 -> verde 
+                180 -> cyan 
+                240 -> azul
+                300 -> magenta 
+
+            El segundo valor es la saturación o intensidad del color.
+
+                0% -> gris 
+                100% -> Color puro 
+
+            El tercer valor es la luminocidad del color 
+
+                0% -> negro
+                100% -> blanco, luz maxima
+
+            Nota: Es importante que aunque el valor de saturación o luminancia sea 0 hay que poner 0% si no, no funcionara 
+
+            El modo HSL tambien admite transparencia y su sintaxis es la misma que la del modo RGB. Tenemos dos sintaxis disponible.
+
+                hsla(h,s,l,a)
+                hsl(h s l / a)
+
+            En ambos casos el valor alpha va de 0 a 1
+
+        Existen otros cuatro modos de color en los que se esta trabajando que serian CMYK (cyan, magenta, yellow y black), HWB (hue, whitness, blackness), Lab(lightness, distance a, distance b) y lch(lightness, chroma, hue), todos estan en el borrador del modulo de color de nivel 4 pero aún no es estándar.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+}
+
+.box1{
+    margin: 50px auto 0px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 100px solid lightcoral;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    /* width: 300px;
+    height: 300px;
+    background-color: purple; */
+}
+
+.main{
+    margin: 50px auto 0px;
+    width: 15rem;
+    height: 15rem;
+    color: yellowgreen;
+    background-color: currentColor;
+}
+
+.m_box{
+    width: 10rem;
+    height: 10rem;
+    background-color: grey;
+    border: 10px solid currentColor;
+    border-top-left-radius: 50px; 
+}
+
+.box2{
+    margin: 50px auto 0px;
+    width: 9rem;
+    height: 9rem;
+    background-color: rgb(83, 110, 201);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .5);
+}
+
+.box3{
+    margin: 50px auto 50px;
+    width: 9rem;
+    height: 9rem;
+    background-color: #3A8A6f;
+    box-shadow: 10px 10px 30px #00000080;
+}
+
+.box3-3{
+    position: relative;
+    top: 25%;
+    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+    background-color: #d459ca;
+    border: .5rem solid #333;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px 3px #205080;
+}
+
+/* Esto no es parte delcurso por el momento, ¡solo pora probar! */
+
+.box3-3:hover{
+    cursor: pointer;
+    background-color: #863d80;
+    box-shadow: 1px 1px 10px 4px #205080;
+    transition: 1s;
+}
+
+/* --------------------------------------------------------------- */
+
+.box4{
+    margin: 50px auto 50px;
+    width: 9rem;
+    height: 9rem;
+    background-color: hsl(75, 50%, 35%);
+    box-shadow: 1px 1px 10px 3px hsl(0 50% 0% / .5);
+}
+

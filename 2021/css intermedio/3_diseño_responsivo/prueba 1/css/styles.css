@@ -1,0 +1,152 @@
+:root{
+    --fondo-principal: rgb(243, 242, 201);
+    --fondo-principal-hover: rgb(211, 211, 199);
+    --fondo-secundario: rgb(0, 54, 56);
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--fondo-principal);
+    font-family: sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--fondo-secundario);
+    z-index: 10;
+}
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    left: 4rem;
+    color: var(--fondo-principal);
+}
+
+.nav{
+    display: inline-block;
+    position: absolute;
+    right: 4rem;
+    top: 1.8rem;
+    color: var(--fondo-principal);
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.nav:hover{
+    color: var(--fondo-principal-hover);
+}
+
+.nav__inicio{
+    padding:0 3rem;
+}
+
+.nav__detalles{
+    border-bottom: .05rem solid var(--fondo-principal);
+    transition: 0.3s;
+}
+
+.nav__detalles:hover{
+    border-bottom: .05rem solid var(--fondo-principal-hover); 
+}
+
+.section{
+    position: relative;
+    top: 8rem;
+    margin: 3rem auto;
+    width: 70rem;
+    height: 15rem;
+    box-shadow: 0px 0px 5px;
+    background-color: rgb(243, 242, 242);
+    font-size: 0;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    color: var(--fondo-principal);
+}
+
+.section__img{
+    position: relative;
+    display: inline-block;
+    width: 15rem;
+    height: 100%;
+    background-color: rgb(5, 80, 82);
+}
+
+.section__contenedor{
+    position: absolute;
+    display: inline-block;
+    width: 55rem;
+    height: 100%;
+    padding: 2rem 3rem;
+    background-color: rgb(0, 54, 56);
+    font-size: 1rem;
+}
+
+.section__title{
+    font-size: 2rem;
+    color: rgb(83, 184, 187);
+}
+
+.section_text{
+    line-height: 1.75rem;
+}
+
+.footer{
+    position: relative;
+    top: 20rem;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    background-color: var(--fondo-secundario);
+}
+
+@media (max-width: 1200px) {
+    .section{
+        width: 70%;
+        height: 15rem;
+    }     
+
+    .section__img{
+        width: 30%;
+        height: 100%;
+        background-color: rgb(36, 184, 189);
+    }
+    
+    .section__contenedor{
+        width: 70%;
+        height: 100%;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .section{
+        margin: 1rem auto;
+        width: 70%;
+        height: 28rem;
+    }
+    
+    .section__img{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(107, 132, 133);
+    }
+    
+    .section__contenedor{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        padding: 1rem 2rem;
+    }
+}

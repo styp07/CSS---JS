@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title> Pseudoclases </title>
+</head>
+<body>
+	<header class="header">
+		<div class="camp">
+			<div class="logo"> J <span class="logo-span"> S </span> </div>
+		</div>
+		<nav class="nav">
+			<ul class="nav-ul">
+				<li class="nav-li"> <a href="#" class="nav-enlace nav__enlace-active"> Soy un link </a> </li>
+				<li class="nav-li"> <a href="#" class="nav-enlace nav__enlace-link"> Inicio </a> </li>
+				<li class="nav-li"> <a href="#" class="nav-enlace nav__enlace-active"> Cuenta </a> </li>
+				<li class="nav-li"> <a href="#" class="nav-enlace nav__enlace-hover"> Algo </a> </li>
+			</ul>
+		</nav>
+	</header>
+	<main class="main">
+		<div class="pseudoclases"> Pseudoclases </div>
+		<div class="child">
+			<p class="child__text"> lorem lorem lorem lorem lorem</p>
+			<p class="child__text"> lorem lorem lorem lorem lorem</p>
+			<p class="child__text"> lorem lorem lorem lorem lorem</p>
+		</div>
+		<div class="type">
+			<p class="type__text"> Parrafo 1</p>
+			<div class="type__div"> Div 1</div>
+			<p class="type__text"> Parrafo 2</p>
+			<p class="type__text"> Parrafo 3</p>
+			<div class="type__div"> Div 2</div>
+		</div>
+		<div class="nth">
+			<ul class="nth__ul">
+				<li class="nth__li"> Item 1</li>
+				<li class="nth__li"> Item 2</li>
+				<li class="nth__li"> Item 3</li>
+				<li class="nth__li"> Item 4</li>
+				<li class="nth__li"> Item 5</li>
+				<li class="nth__li"> Item 6</li>
+				<li class="nth__li"> Item 7</li>
+				<li class="nth__li"> Item 8</li>
+
+			</ul>
+		</div>
+		<div class="typenth">
+			<p class="typenth__text"> Parrafo 1</p>
+			<div class="typenth__div"> Div 1</div>
+			<p class="typenth__text"> Parrafo 2</p>
+			<p class="typenth__text"> Parrafo 3</p>
+			<div class="typenth__div"> Div 2</div>
+			<p class="typenth__text"> Parrafo 4</p>
+			<div class="typenth__div"> Div 3</div>
+			<p class="typenth__text"> Parrafo 5</p>
+			<p class="typenth__text"> Parrafo 6</p>
+		</div>
+		<div class="only">
+			<p class="only__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vitae veritatis accusamus tempore vero rerum ipsam facilis officia recusandae voluptate laudantium soluta eligendi fuga, pariatur quasi, cum odit praesentium cumque?</p>
+		</div>
+		<div class="onlytype">
+			<p class="onlytype__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam modi earum nesciunt molestias consequuntur, laborum ea dolorem quae sunt hic repudiandae ullam a, aliquam alias tempore. Modi explicabo debitis veniam.</p>
+			<div class="onlytype__div"> soy un div </div>
+			<a href="#" class="onlytyp__enlace"> enlace 1</a>
+			<a href="#" class="onlytyp__enlace"> enlace 2</a>
+		</div>
+
+		<div class="formulario">
+			<div class="form">
+				<label for="form__input-focus" class="form__label"> focus </label>
+				<input type="text" class="form__input form__input-focus" placeholder="focus">
+			</div>
+			<div class="form">
+				<label for="form__input-disabled" class="form__label"> focus </label>
+				<input type="text" class="form__input form__input-disabled" disabled placeholder="disabled">
+			</div>
+			<div class="form">
+				<label for="form__input-valid-invalid" class="form__label"> Valid / Invalid </label>
+				<input type="email" class="form__input form__input-valid-invalid" placeholder="Valid / Invalid" value="algo@algo.com"> 
+			</div>
+			<div class="form">
+				<label for="form__input-required" class="form__label"> required </label>
+				<input type="text" class="form__input form__input-required" placeholder="focus" required>
+			</div>
+			<div class="form">
+				<label for="" class="form__label"> checked </label>
+				<div class="formcheck">
+					<label for=""><input type="checkbox" class="form__input-checked" > checkbox </label>
+				</div>
+			</div>
+			<div class="form">
+				<label for="form__input-default" class="form__label"> default </label>
+				<label for=""><input type="radio" name="option" id="1" value="1"> Opcion 1</label>
+				<label for=""><input type="radio" class="checked" name="option" id="2" value="2" checked> Opcion 2</label>
+				<label for=""><input type="radio" name="option" id="3" value="3"> Opcion 3</label>
+			</div>
+			<div class="form">
+				<label for="form__input-range" class="form__label"> range </label>
+				<input type="number" class="form__input form__input-range" placeholder="101" min="1" max="101" value="1"> 
+			</div>
+			<button> Enviar </button>
+	</main>
+</body>
+</html>

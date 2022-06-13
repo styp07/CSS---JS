@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color:rgb(150, 150, 150);
+}
+
+.header{
+    position: relative;
+    width: 80%;
+    height: 5rem;
+    margin: 3rem auto;
+    background-color: rgb(146, 48, 48);
+}
+
+.main{
+    position: relative;
+    width: 75%;
+    height: 30rem;
+    margin: 1rem auto;
+    border: .2rem solid rgb(12, 12, 12);
+}
+
+.box{
+    position: relative;
+    width: 55%;
+    height: 12rem;
+    margin: 1.7rem;
+}
+
+.box--1{
+    background-color: rgb(86, 48, 146);
+}
+
+.box--2{
+    background-color: rgb(48, 135, 146);
+}
+
+.artl{
+    position: absolute;
+    right: 1.7rem;
+    top: 1.7rem;
+    width: 30%;
+    height: 90%;
+    background-color: rgb(150, 52, 7);
+}
+
+.footer{
+    width: 80%;
+    height: 5rem;
+    margin: 2.5rem auto 0;
+    background-color: rgb(12, 12, 12);
+}
+
+@media (max-width:720px) {
+    
+    .main{
+        position: relative;
+        width: 75%;
+        height: 44rem;
+    }
+    
+    .box{
+        position: relative;
+        width: 85%;
+        height: 12rem;
+    }
+
+    .artl{
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 90%;
+        height: 12rem;
+        margin: 1.7rem; 
+    }
+    
+}
+
+@media (max-width:360px) {
+    
+    .main{
+        position: relative;
+        width: 80%;
+        height: 18rem;
+    }
+    
+    .box{
+        display: inline-block;
+        position: relative;
+        left: 1.5rem;
+        width: 35%;
+        height: 6.5rem;
+        margin: .5rem;
+    }
+
+    .artl{ 
+    position: relative;
+    width: 80%;
+    height: 6.5rem;
+    }
+}
+    
+}

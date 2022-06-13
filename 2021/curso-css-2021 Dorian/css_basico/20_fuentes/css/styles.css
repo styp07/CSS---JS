@@ -1,0 +1,253 @@
+/* 
+
+    La tipogradia es la ciencia que estudia el diseño y uso de los tipos de letra.
+
+    Las fuentes son tipos especificos de letra.
+
+    Los glifos son cada uno de los dibujos que representan cada simbolo de la fuente, incluido los espacios.
+
+    Los estilos de fuente son los modificadores que se hacen a las fuentes, como el grosor o la inclinación.
+
+    Familia tipografica, son las diferentes fuentes que pertenecen a una misma fuente base.
+
+    Cuando usamos una propiedad text-* estamos afectando a un bloque completo.
+
+    Cuando utilizamos una propiedad font-* afectamos a la fuente del texto.
+
+    Fuentes predeterminadas, son las fuentes que se consideran seguras ya que son genericas y no establecen una familia tipografica, si no es un estilo de fuente.
+
+        serif: fuentes que tienen serifas (adornos en los caracteres)
+        sans-serif: fuentes sin serifas 
+        monospace: fuentes que tienen el mismo espacio entre todos sus caracteres
+        cursive: fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos
+        fantasy: fuentes que suelen ser decorativas
+
+    Google Icons
+    Material Icons
+       https://fonts.googleapis.com/css?family=Material+Icons
+    Material Icons Outlined
+       https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+    Material Icons Two Tone
+       https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+    Material Icons Rounded
+       https://fonts.googleapis.com/css?family=Material+Icons+Round
+    Material Icons Sharp
+       https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+      
+    Nota: Si vas a usar una gran cantidad de iconos en tu web compensa usar la librería remota
+    Si sólo usarás unos pocos es mejor descargarlos en formato svg y utilizarlos como imágenes
+
+    Formatos para fuentes 
+
+        true type font (TTF) -> Fue el primer formato estandar.
+
+        Open true type font (OTF) -> facilita o implementa la creación de las curvas.
+
+        Web open Font format (WOFF) (WOFF2) -> Es un formato mucho màs ligero y mejora el rendimiento. Funciona a traves de metadatos. WOFF tiene soporte total y WOFF2 no funciona en internet explorer.
+
+        Scalable Vector Graphics (SVG) -> para efectos y animaciones sobre el texto, no es recomendable usarlo en el texto generico de la web, tiene muchos problemas.
+
+        Embedded Open Type (EOT) -> primer formato digital propuestos para sitios WEB y es comprimido. Se quedo como una propuesta pero no paso a ser un estandar.
+
+    Regla @font-face
+
+        Esta es la forma de utilizar fuentes que tenemos descargadas y que no traemos de un servidor remoto, cuando usamos google fonts, esto es lo que esta pasando por detras.
+
+        La sintaxis es:
+
+            @font-face {
+
+                font-family: Nombre de la familia, se la asiganamos nosotros;
+
+                src: aqui pondremos dos tipos de valores.
+                   
+                    local() -> pondremos el nombre de la fuente para buscarla en el ordenador del usuario, de esa forma podremos evitar descargarla
+
+                    url() -> Si no encontramos esa fuente procederemos a descargarla.
+                    Existe otro valor, menos usado que es format
+
+                    format() -> Este valor lo pasaremos de forma opcional si queremos ser mas especificos con la fuente que vamos a buscar o descargar, si no lo ponemos cogerael primer formato soportado, si lo ponemos solo usara el que hemos establecido, y si no lo encuentra no hara nada.
+
+            }
+
+            Podemos añadir mas valores como font-style, font-weight y font-display(experimental), pero esos son opcionales.
+
+    Transformación de texto
+
+        text-transform: Esta propiedad nos permite hacer transformaciones ESTETICAS en nuestro texto.
+        Admite los valores:
+
+            none: No se aplicara ninguna transformación.
+            uppercase: El texto se pondra en mayusculas.
+            lowercase: El texto se pondra en minusculas.
+            capitalize: Transforma la primera letra de cada palabra en mayuscula.
+
+     Adornos en el texto
+
+        text-decoration: Esta propiedad nos permite controlar la linea que podemos poner en los textos.
+        Admite los valores:
+
+            none: Elimina cualquier linea.
+            underline: Coloca una linea bajo el texto.
+            overline: Coloca una linea sobre el texto.
+            line-through: Coloca una linea tachando el texto.
+
+        Text-shadow: Funciona exactamente igual que box-shadow, con la unica diferencia de que no admite el valor de inset ni la expancion de la sombra.
+        Los valores son:
+            
+            offsetx: desplazamiento horizontal.
+            offsety: desplazamiento vertical.
+            blur: desenfoque.
+            color: color, por defecto coje el del texto.
+
+    Espaciado en fuentes y textos
+
+        letter-spacing: Establece la separacion entre caracteres, se puede establecer en cualquier medida valida para css
+
+        word-spacing: Establece la separacion entre palabras, se puede establecer en cualquier medida valida para css.
+
+        line-height: Establece el alto de cada linea, se puede dar una medida concreta o se puede poner un numero que se multiplicara por el font size del texto al que se lo estamos aplicando.
+
+    Orientacion del texto
+
+        writing-mode: Establece la direccion del texto 
+
+*/
+
+@font-face {
+    font-family: 'mano';
+    src: local(AlexBrush-Regular), url(../assets/fonts/AlexBrush-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: rgb(240, 240, 240);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(10, 10, 10);
+    margin-top: -6vh;
+}
+
+.nav{
+    height: 12vh;
+}
+
+.icon{
+    position: relative;
+    top: 3vh;
+    left: 2rem;
+    color: rgb(197, 125, 16);
+}
+
+.icon:hover{
+    color: rgb(114, 73, 10);
+    transition: .5s;
+}
+
+
+.main{
+    position: relative;
+    top: 12vh;
+    margin: 0rem 10rem;
+}
+
+h1{
+    border-bottom: .1rem solid rgb(197, 125, 16);
+    color: rgb(197, 125, 16);
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.js{
+    font-family: mano;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(10, 10, 10);
+    border-top: .15rem solid rgb(114, 73, 10);
+}
+
+.f1{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    width: 60%;
+    height: 10rem;
+    text-align: left;
+}
+
+.f2{
+    margin: 0;
+    position: relative;
+    bottom: 2.37rem;
+    right: 1rem;
+    display: inline-block;
+    width: 33rem;
+    height: 10rem;
+    text-align: center;
+}
+
+.f1-1{
+    position: relative;
+    left: 20rem;
+    padding-top: 1.5rem;
+}
+
+.f11{
+    text-decoration: overline;
+}
+
+.f12{
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.f13{
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+
+.f2-1{
+    font-size: 5rem;
+    text-shadow: 4px 4px 10px rgb(114, 73, 10);
+}
+
+.div2{
+    letter-spacing: 5px ;
+    /* word-spacing: 5px; */
+    line-height: 35px;
+}
+
+.div3{
+    display: inline-block;
+    position: relative;
+    bottom: 20rem;
+    left: 68rem ;
+    writing-mode: vertical-lr;
+}
+
+.div4{
+    display: inline-block;
+    position: relative;
+    bottom: 20rem;
+    right: 13rem ; 
+    word-break: break-all;
+    width: 10px;
+}
+

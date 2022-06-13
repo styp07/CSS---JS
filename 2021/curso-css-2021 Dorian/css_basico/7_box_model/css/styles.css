@@ -1,0 +1,150 @@
+/* 
+    margin:
+        Es la propiedad que nos permite generar espacio entre elementos.
+        Es un shorthand (propiedad abreviada) que controla los cuatro lados posibles a los que dar margenes.
+        margin-top: margen superior
+        margin-right: margen derecho 
+        margin-buttom: margen inferior
+        margin-left: margen izquierdo 
+        
+        Admite hasta 4 valores que van en el orden de las agujas del reloj.
+
+        4 valores = margin: top right buttom left;
+        3 valores = margin: top left/right buttom;
+        2 valores = margin: top/buttom right/left;
+        4 valores = margin: top/right/buttom/left;
+
+    padding:
+        Es la propiedad que nos permite generar espacio interno entre el borde y la caja en un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding.
+        
+        padding-top: margen superior
+        padding-right: margen derecho 
+        padding-buttom: margen inferior
+        padding-left: margen izquierdo 
+
+        Admite hasta 4 valores que van en el orden de las agujas del reloj.
+
+        4 valores = padding: top right buttom left;
+        3 valores = padding: top left/right buttom;
+        2 valores = padding: top/buttom right/left;
+        4 valores = padding: top/right/buttom/left;
+    
+    border:
+        Es la propiedad que permite modificar el borde de una caja.
+        Es un shorthand (propiedad abreviada) que agrupa tres propiedades.
+
+            border-width: ancho del borde 
+
+                border-top-widht
+                border-right-widht
+                border-button-widht
+                border-left-widht
+
+            border-style: estilo del borde 
+
+                border-top-style
+                border-right-style
+                border-button-style
+                border-left-style
+
+                listado de valores para style:
+
+                    none
+                    hidden
+                    dotted
+                    dashed
+                    solid
+                    double
+                    groove
+                    ridge
+                    inset
+                    outset
+
+            border-color: color del borde 
+
+                border-top-color
+                border-right-color
+                border-button-color
+                border-left-color
+
+    box-sizing:
+        
+        Es la propiedad que nos permite controlar el calculo que hace el navegador a la hora de modificar las propiedades content, padding y border.
+        Los dos valores que podemos darles son:
+
+            content-box: valor por defecto 
+            border-box: Calculo de tamalo del elemento 
+            incluyendo el padding y el border.
+
+*/
+
+/* 
+
+ NO USAR, solo en caso de que sea un diseño que se modifique todo 
+*{
+    margin: 0;
+    padding: 0;
+} */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0; /* recomendable */
+}
+
+.header{
+    background-color: seagreen;
+    height: 50px;
+}
+
+.title{
+    background-color: salmon;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+.box{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: 5px solid #753;
+    /* margin: 0 auto;  NO USAR */
+    /* padding: 50px 20px 100px 70px; */
+}
+
+/* Los elementos en linea no tienen medidas 
+    los elementos en linea tienen solo margenes de izquierda y derecha
+ */
+.inline{
+    background-color: lightsalmon;
+    color: inherit;
+    margin-left: 100px;
+}
+
+.buttons{
+    margin-top: 15px;
+    background-color: aquamarine;
+    padding: 20px 20px;
+}
+
+.button{
+    padding: 20px 50px;
+    margin-left: 150px;
+    /* border: 10px solid #557; */
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: #577; */
+    border-right-color: blueviolet ;
+    border-left-color: rosybrown;
+    border-width: 10px;
+    border-style: solid;
+}

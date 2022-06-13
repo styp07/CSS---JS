@@ -1,0 +1,157 @@
+/* 
+
+    La propiedad position nos permite posicionar los elementos. hay algunos conceptos que hay que conocer para entender position.
+
+    Flujo de renderizado -> por norma general los elementos se dibujan de izquierda a derecha y de arriba a abajo. El punto 0,0 de los elementos, por norma general, es la esquina superior izquierda.
+
+    Espacio reservado -> Es el espacio que tiene un elemento asignado en el navegador.
+
+    Elemento posicionado -> Esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.
+
+    Stackin context -> Contexto de apilamiento. Es el orden en el que se apilaran las cajas que se superponen, dentro del mismo contenedor.
+
+    Al posicionar un elemento se habilitan 5 propiedades que podemos utilizar para mover los elemntos en 3 ejes.
+
+        top -> El elemento se moverá desde la parte superior la distancia que le hayamos indicado.
+
+        rigth -> El elemento se moverá desde la parte derecha la distancia que le hayamos indicado. 
+
+        bottom -> El elemento se moverá desde la parte inferior la distancia que le hayamos indicado. 
+
+        left -> El elemento se moverá desde la parte derecha la distancia que le hayamos indicado. 
+
+        z-index -> Nos permite mover el elemento en el contexto de apilamiento (eje z).
+
+        NOTA: si a un elemento le declaramos la propiedad top y/o left, las propiedades bottom  y/o rigth no funcionaran.
+
+    Los posibles valores que le podemos dar a position son:
+
+        static -> Es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTA POSICIONADO y por lo cual no podemos moverlo.
+
+        relative -> El elemento mantendra su posicion y medidas en el flujo de renderizado y mantendra su espacio reservado. Si lo movemos lo hara usando su posicion en el html como punto de referencia.
+
+        absolute -> El elemento perdera sus medidas y su espacio reservado. Si lo movemos usara un elemento padre posicionado como referencia. Si no tiene ninguno, usara el elemnto html de referencia.
+
+        fixed -> El elemento perderá sus medidad y su espacio reservado. Si lo movemos usara el elemnto html de referencia, y ademas se quedara fijo en esa posicion aunque hagamos scroll.
+
+        sticky -> Es una mezcla de position relative y fixed. Con este tipo de posicionamiento los valores top, left, bottom y rigth no sirven para mover el elemento, si no para indicarle en que punto pasara a tener un comportamiento de posicionamiento fixed, hasta llegar a ese punto se comportara como si tuviera relative.
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    text-align: center;
+    padding-top: 70px;
+    color: cornsilk;
+}
+
+.header{
+    background-color: burlywood;
+    padding: 25px 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    color: #000;
+    z-index: 20;
+}
+
+.container{
+    background-color: lightslategray;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-c{
+    background-color: silver;
+    width: 250px;
+    height: 250px;
+    position: relative; 
+    left: 125px;
+    top: 100px;
+}
+.caja{
+    width: 100px;
+    height: 100px;
+    color: #000;
+}
+
+.box-es{
+    background-color: teal;
+    position: absolute;
+    right: 0px;
+    bottom: 75px;
+}
+
+.box-1{
+    background-color: tomato;
+    position: relative;
+    left: 200px;
+    top: 50px;
+}
+
+.box-2{
+    background-color: yellowgreen;
+    border-radius: 50px;
+    position: relative;
+    left: 200px;
+    bottom: 50px;
+}
+
+.box-3{
+    background-color: brown;
+    position: absolute;
+    bottom: 300px;
+    right: 0px;
+}
+
+.sticky-t{
+    background-color: aquamarine;
+    color: black;
+    position: sticky;
+    top: 60px;
+    z-index: 30;
+}
+
+.sticky h2{
+    background-color: #333;
+    outline: 3px solid red;
+    position: sticky;
+    top: 90px;
+}
+
+.z{
+    background-color: darkolivegreen;
+    color: black;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zz{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.z-1{
+    background-color: grey;
+    top: 150px;
+    left: 150px;
+    z-index: 10;
+}
+
+.z-2{
+    background-color: goldenrod;
+    left: 320px;
+    z-index: -10;
+}

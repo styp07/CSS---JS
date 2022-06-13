@@ -1,0 +1,271 @@
+:root{
+	--color-principal: rgb(219, 219, 219);
+	--color-secundario: rgb(53, 16, 16);
+}
+
+body{
+	background-color: var(--color-principal);
+	margin: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.header{
+	width: auto;
+	height: 5rem;
+	background-color: var(--color-secundario);
+}
+
+.camp{
+	position: absolute;
+	display: inline-block;
+	width: 50%;
+	height: 5rem;
+}
+
+.logo{
+	display: inline-block;
+	padding: 1.35rem 3rem;
+	font-size: 2em;
+	color: darksalmon;
+}
+
+.logo-span{
+	color: cornsilk;
+}
+
+.nav{
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	width: 49%;
+	text-align: right;
+}
+
+.nav-li{
+	display: inline-block;
+	list-style: none;
+	padding: 1rem 3rem;
+}
+
+.nav-enlace{
+	text-decoration: none;
+	color: darksalmon;
+}
+
+.nav-enlace:hover{
+	color: rgb(229, 175, 157);
+}
+
+.nav-enlace:active{
+	color: rgb(190, 98, 68);
+}
+
+/* .nav__enlace-active:active{
+	color: rgb(44, 44, 44);
+}
+
+.nav__enlace-link:link{
+	color: rgb(0, 0, 0);
+}
+
+
+.nav__enlace-active:active{
+	color: dimgray;
+}
+
+.nav__enlace-hover:hover{
+	color: rgb(255, 211, 196); */
+
+.pseudoclases{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(53, 16, 16);
+	padding: 2rem 4rem;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.child{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(53, 16, 16);
+	padding: 2rem 4rem;
+}
+
+.child__text{
+	padding: 1rem;
+	background-color: rgb(43, 29, 29);
+	color: var(--color-principal);
+	font-size: 1.5em;
+}
+
+.child__text:first-child{
+	background-color: rgb(26, 48, 46);
+}
+
+.child__text:last-child{
+	background-color: saddlebrown;
+}
+
+.type{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(53, 16, 16);
+	padding: 2rem 4rem;
+}
+
+.type__text:last-of-type{
+	border: .2rem solid rgb(53, 16, 16);
+}
+
+.type__div:first-of-type{
+	border: .2rem solid rgb(16, 44, 53);
+}
+
+.nth{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(0, 0, 0);
+	padding: 2rem 4rem;
+}
+
+/* .nth :nth-child(odd){
+	background-color: rgb(98, 0, 128);
+}
+
+.nth :nth-child(even){
+	background-color: rgb(45, 104, 94);
+} */
+
+.nth :nth-child(2n){
+	background-color: yellowgreen;
+}
+
+.nth :nth-child(4){
+	background-color: teal;
+}
+.nth :nth-last-child(2){
+	background-color: rgb(146, 146, 50);
+}
+
+.nth__li{
+	list-style: none;
+	padding: 1rem;
+}
+
+.typenth{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(0, 0, 0);
+	padding: 2rem 4rem;
+}
+
+.typenth__text:nth-of-type(1){
+	background-color: yellowgreen;
+}
+
+.typenth__div:nth-last-of-type(3){
+	background-color: rgb(73, 50, 205);
+}
+
+.typenth__text:nth-of-type(2n){
+	background-color: rgb(148, 126, 86);
+}
+
+.only{
+	margin: 2rem auto;
+	width: 40%;
+	background-color: tomato;
+	padding: 2rem 4rem;	
+}
+
+.only__text:only-child{
+	color: white;
+}
+
+.onlytype{
+	margin: 2rem auto;
+	width: 70%;
+	background-color: tomato;
+	padding: 2rem 4rem;	
+}
+
+.onlytype__div:only-of-type{
+	width: 10rem;
+	height: 4rem;
+	padding: .5rem 1.5rem;
+	border: 1rem solid black;
+}
+
+.onlytype__enlace:only-of-type{
+	text-decoration: none;
+}
+
+.formulario{
+	margin: 2rem auto;
+	width: 60%;
+	border: .2rem solid rgb(53, 16, 16);
+	padding: 2rem 4rem;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.form{
+	width: 80%;
+	border-bottom: .2rem solid slategray;
+	margin: 2rem auto;
+	text-align: left;
+	font-size: .7em;
+}
+
+.form__label{
+	display: block;
+}
+
+.form__input{
+	width: 80%;
+	height: 3rem;
+	margin-bottom: 1.5rem;
+	font-size: .6em;
+}
+
+.form__input-focus:focus{
+	border: .3rem solid slateblue;
+}
+
+.form__input-disabled:disabled{
+	background-color: rgb(152, 150, 168);
+}
+
+.form__input-valid-invalid:valid{
+	background-color: rgb(54, 134, 78);
+}
+
+.form__input-valid-invalid:invalid{
+	background-color: rgb(134, 54, 54);
+}
+
+.form__input-required:required{
+	background-color: rgb(134, 126, 54);
+}
+
+.form__input-checked:checked{
+	box-shadow: 0px 0px 10px 2px darkseagreen;
+}
+
+.checked:default{
+	box-shadow: 0px 0px 10px 2px rgb(143, 175, 188);	
+}
+
+.form__input-range:in-range{
+	background-color: darkseagreen;
+	border: none;
+}
+
+.form__input-range:out-of-range{
+	background-color: rosybrown;
+	border: none;
+}

@@ -1,0 +1,78 @@
+:root{
+    --color-principal: rgb(238, 238, 238);
+    --color-principal-hover: rgb(182, 182, 182);
+    --color-secundario: rgb(15, 4, 76);
+    --font-principal: font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--font-principal);
+}
+
+.nav{
+    position: relative;
+    width: auto;
+    height: 4.5rem;
+}
+
+.logo{
+    display: inline-block;
+    position: absolute;
+    left: 3rem;
+    top: .5rem;
+    font-size: 2.5em;
+}
+
+.navegador{
+    display: inline-block;
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+}
+
+.nav__enlace{
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 0 2rem;
+    transition: 1s;
+}
+
+.nav__enlace:hover{
+    color: var(--color-principal-hover);
+    border-bottom: .1rem solid rgb(238, 238, 238);
+}
+
+.nav__enlace--icon{
+    display: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(75, 0, 172, 0.5), 
+        rgba(172, 0, 172, 0.5)
+      ), url(../assets/descarga1.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    color: var(--color-principal);
+}
+
+@media (max-width: 800px) {
+    .nav__enlace{
+        display: none;
+    }
+
+    .nav__enlace:hover{
+        border-bottom: 0;
+    }
+
+    .nav__enlace--icon{
+        display: inline-block;
+    }
+}

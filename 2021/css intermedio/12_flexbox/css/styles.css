@@ -1,0 +1,272 @@
+:root{
+    --color-principal: rgb(32, 25, 68);
+    --color-secundario: rgb(223, 152, 21);
+    --color-secundario-2: rgb(240, 114, 12);
+    --color-terciario: rgb(224, 209, 182);
+    --color-terciario-2: rgb(61, 59, 56);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--color-principal);
+}
+
+.flex1{
+    margin: 2rem auto;
+    width: 70vw;
+    /* height: 30vh; */
+    background-color: var(--color-secundario);
+    border: .5rem solid var(--color-secundario-2);
+    display: flex;
+}
+
+.flex1__box{
+    margin: .2rem .2rem;
+    background-color: var(--color-terciario);
+    border: .3rem solid var(--color-terciario-2);
+    text-align: center;
+    padding: .3rem .2rem;
+}
+
+/* .flex1__box-1{
+    width: 7rem;
+    height: 10rem;
+}
+
+.flex1__box-2{
+    width: 10rem;
+    height: 8rem;
+}
+
+.flex1__box-3{
+    width: 5rem;
+    height: 10.5rem;
+}
+
+.flex1__box-4{
+    width: 7rem;
+    height: 6rem;
+} */
+
+/* Propiedad número 1:
+    flex-direction:();
+
+        column: Se direcciona de forma vertical de arriba a abajo
+        column-reverse: se direcciona de forma vertical de abajo a arriba
+        row: Se direcciona de forma horizontal de izquierda a derecha
+        row-reverse: Se direcciona de forma horizontal de derecha a izquierda
+
+*/
+
+/* .flex1{
+    flex-direction:row;
+} */
+
+/* Propiedad número 2:
+    flex-wrap:(); Nos permite saber como se acomodaran los elementos del contenedor
+
+        nowrap: todos los elementos flexibles estarán en una línea
+        wrap: los elementos flexibles se envolverán en varias líneas, de arriba a abajo.
+        wrap-reverse: los elementos flexibles se envolverán en varias líneas de abajo hacia arriba.
+*/
+
+/* .flex1{
+    flex-wrap: wrap;
+} */
+
+/* Propiedad número 3:
+    flex-flow: Es la combinación de las dos propiedades anteriores, su sintaxis es:
+
+        flex-flow: [flex-direction] [flex-wrap]
+*/
+
+.flex1{
+    flex-flow: row nowrap;
+}
+
+/* Propiedad número 4:
+    justify-content: (); Esto define la alineación a lo largo del eje principal. Ayuda a distribuir el espacio libre adicional que queda cuando todos los elementos flexibles de una línea son inflexibles o son flexibles pero han alcanzado su tamaño máximo.
+
+        flex-star: los elementos se empaquetan hacia el inicio de la dirección flexible.
+        flex-end: los artículos se embalan hacia el final de la dirección flexible.
+        start: los artículos se embalan hacia el comienzo de la dirección.writing-mode
+        end: los artículos se empaquetan hacia el final de la dirección.writing-mode
+        left: los artículos se empaquetan hacia el borde izquierdo del contenedor, a menos que eso no tenga sentido con el , entonces se comporta como .flex-directionstart
+        right: los artículos se empaquetan hacia el borde derecho del contenedor, a menos que eso no tenga sentido con el , entonces se comporta como .flex-directionend
+        center: los elementos se centran a lo largo de la línea
+        space-between: los artículos se distribuyen uniformemente en la línea; el primer elemento está en la línea de inicio, el último elemento en la línea final
+        space-around: los artículos se distribuyen uniformemente en la línea con igual espacio a su alrededor. Tenga en cuenta que visualmente los espacios no son iguales, ya que todos los elementos tienen el mismo espacio en ambos lados. El primer elemento tendrá una unidad de espacio contra el borde del contenedor, pero dos unidades de espacio entre el siguiente elemento porque ese siguiente elemento tiene su propio espaciado que se aplica.
+        los elementos se distribuyen de modo que el espaciado entre dos elementos cualesquiera (y el espacio a los bordes) sea igual.
+
+*/
+
+.flex1{
+    justify-content:space-evenly;
+}
+
+/* Propiedad número 5:
+    align-items: (); Define el comportamiento predeterminado de cómo se colocan los elementos flexibles a lo largo del eje transversal en la línea actual.
+
+        stretch: Estirar para llenar el contenedor (aún respetando el ancho mínimo / ancho máximo)
+        flex-start / start / self-start: los elementos se colocan al principio del eje transversal. La diferencia entre estos es sutil, y se trata de respetar las reglas o las reglas.
+        flex-end / end / self-end: los elementos se colocan al final del eje transversal. La diferencia de nuevo es sutil y se trata de respetar las reglas vs. reglas.flex-directionwriting-mode
+        center: los elementos están centrados en el eje transversal
+        baseline: los elementos están alineados de tal manera que sus líneas base se alinean
+
+*/
+
+.flex1{
+    align-items:baseline;
+}
+
+/* propiedad número 6:
+    align-content:(); Esto alinea las líneas de un contenedor flexible cuando hay espacio adicional en el eje transversal, de manera similar a cómo alinea elementos individuales dentro del eje principal.justify-content
+
+        normal: los elementos se empaquetan en su posición predeterminada como si no se hubiera establecido ningún valor.
+        flex-start / start: artículos embalados hasta el inicio del contenedor. El (más apoyado) honra el mientras honra la dirección.flex-startflex-directionstartwriting-mode
+        flex-end / end: artículos embalados hasta el final del contenedor. El (más apoyo) honra el final mientras que honra la dirección.flex-endflex-directionwriting-mode
+        center: elementos centrados en el contenedor
+        space-between: artículos distribuidos uniformemente; la primera línea está al principio del contenedor, mientras que la última está al final
+        space-around: artículos distribuidos uniformemente con el mismo espacio alrededor de cada línea
+        space-evenly: los artículos se distribuyen uniformemente con el mismo espacio a su alrededor
+        stretch: las líneas se estiran para ocupar el espacio restante
+
+*/
+
+/* .flex1{
+    align-content:space-around;
+    height: 25rem;
+} */
+
+/* Propiedad número 7:
+    gap:(); La propiedad gap controla explícitamente el espacio entre los elementos flexibles. Aplica ese espaciado solo entre elementos que no están en los bordes exteriores.
+    row-gap:();
+    colum-gap:();
+
+*/
+
+/* .flex1{
+    gap: 1rem;
+} */
+
+/* Propiedad número 8 (items):
+    order: ();
+
+*/
+
+/* .flex1__box-1{
+    order: 3;
+}
+.flex1__box-2{
+    order: 1;
+}
+.flex1__box-3{
+    order: 0;
+}
+.flex1__box-4{
+    order: 2;
+}
+.flex1__box-5{
+    order: 5;
+} */
+
+/* Propiedad número 9 (itmes):
+    flex-grow: Esto define la capacidad de un elemento flexible para crecer si es necesario. Acepta un valor sin unidad que sirve como proporción. Dicta qué cantidad del espacio disponible dentro del contenedor flexible debe ocupar el artículo.
+
+*/
+/*
+.flex1__box-1{
+    flex-grow: 4;
+}
+.flex1__box-2{
+    flex-grow: 0;
+}
+.flex1__box-3{
+    flex-grow: 0;
+}
+.flex1__box-4{
+    flex-grow: 2;
+}
+.flex1__box-5{
+    flex-grow: 1;
+} */
+
+/* Propiedad número 10 (items):
+    flex-shrink: (); Esto define la capacidad de un elemento flexible para encogerse si es necesario.
+
+
+*/
+
+/* .flex1__box-1{
+    flex-shrink: 1;
+}
+.flex1__box-2{
+    flex-shrink: 4;
+}
+.flex1__box-3{
+    flex-shrink: 4;
+}
+.flex1__box-4{
+    flex-shrink: 2;
+}
+.flex1__box-5{
+    flex-grow: 3;
+} */
+
+/* Propiedad número 11 (items):
+    flex-basis: (); Esto define el tamaño predeterminado de un elemento antes de que se distribuya el espacio restante. Puede ser una longitud (por ejemplo, 20%, 5rem, etc.) o una palabra clave. La palabra clave significa "mirar mi propiedad de ancho o alto" (lo que fue hecho temporalmente por la palabra clave hasta que quedó en desuso)
+
+
+*/
+
+/* .flex1__box-1{
+    flex-basis: 7rem;
+}
+.flex1__box-2{
+    flex-basis: 4rem;
+}
+.flex1__box-3{
+    flex-basis: 4rem;
+}
+.flex1__box-4{
+    flex-basis: 4rem;
+}
+.flex1__box-5{
+    flex-basis: 7rem;
+} */
+
+/* Propiedad número 12 (items):
+    flex: [flex-grow][flex-shrink][] Esta es la abreviatura de y combinado.
+*/
+
+.flex1__box-1{
+    flex: 4 1 2rem;
+}
+.flex1__box-2{
+    flex: 1 2 .5rem;
+}
+.flex1__box-3{
+    flex: 1 2 .5rem;
+}
+.flex1__box-4{
+    flex: 4 1 2rem;
+}
+.flex1__box-5{
+    flex: 2 3 1rem;
+}
+
+/* Propiedad final (items):
+    align-self: Esto permite que la alineación predeterminada (o la especificada por ) se anule para elementos flexibles individuales.align-items
+    
+*/
+
+.flex1__box-1{
+    align-self: flex-end;
+}
+.flex1__box-4{
+    align-self: center;
+}

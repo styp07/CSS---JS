@@ -1,0 +1,213 @@
+/* 
+
+Las medidas en css se pueden agrupar en 2 grupos, absolutas y relativas.
+
+Las medidas absolutas NO CAMBIAN y siempre mantendran su tamaño independientemente del dispositivo o la interración del usuario.
+
+La mas usada es px (pixeles) cuya medida es 1/96 de lin, pero existen otros como:
+
+    cm (centimetros) -> 1cm = 96px/2,54
+    mm (milimetros) -> 1mm = 1/10 de 1cm
+    Q (cuarto de milimetro) -> 1Q = 1/40 de 1cm
+    in (inches, pulgadas=) -> 1in = 2,54cm = 96px
+    pc (picas) -> 1pc = 1/16 de 1in
+    pt (puntos) -> 1pt = 1/72 de 1in
+
+Las medidas relativas SIEMPRE dependen de un contexto son las que se recomienda utilizar en la gran mayoria de ocaciones porque nos van a permitir que todos los elementos escalen proporcionalmente.
+
+Los más usados son em, rem, %, vw, vh, vmin y vmax aunque tenemos otras como:
+
+    ex -> altura x de la fuente del elemento.
+    ch -> la medida del ancho del glifo "0" de la letra del elemento.
+    lh -> altura de la linea del elemento.
+
+---------------------------------------------------------------------
+
+    rem -> Corresponde a la medida de la "m" de la raiz del documento (html).
+
+    em -> Corresponde a la medida de la "m" del contexto donde nos encontremos.
+
+    El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO 
+
+    NOTA: Tanto "em" como "rem" se calcula en base a la propiedad  font-size (tamaño de fuente).
+
+---------------------------------------------------------------------
+
+    WIDTH
+
+    % -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
+
+    auto -> Cuando usamos auto le pedimos al navegador que calcule en funcion del espacio disponible.
+
+    HEIGHT
+
+    % -> Cuando estemos dentro de un contenedor, este tiene que tener un alto declarado, si no no podra calcular el porcentaje. Si se le aplica una medida con porcentaje se sustituira automaticamente por auto. 
+
+    auto -> Cuando utilizemos auto el alto lo calculara el navegador en base al contenido del elemento.
+
+    NOTA: height es una propiedad que se tiene que usar con mucho cuidado. Si no es necesario establecer un alto, dejar que el contenido sea el que decida el alto del elemento.
+
+---------------------------------------------------------------------
+
+VIEWPORT
+
+    El viewport es el area util donde se muestra la página web. IMPORTANTE, se tiene que tener en cuenta que es el area visible sin hacer scrroll.
+    Podemos usar el viewport como medida de varias formas:
+
+        vw -> viewport width, hace referencia al ancho del viewport.
+        vh -> viewport height, hace referencia al alto del viewport.
+        vmax -> Utiliza el valor más grande entre el ancho y el alto del viewport.
+        vmin -> Utiliza el valor más pequeño entre el ancho y el alto del viewport.
+
+        1vw = 1% del ancho del viewport
+        1vh = 1% del alto del viewport
+        1vmin = 1% del valor que sea mas pequeño del viewport
+        1vmax = 1% del valor que sea mas grande del viewport
+
+    
+Limitadores dek ancho y alto
+
+    Cuando establecemos un width y/o un height con una medida que es relativa, es posible que no queramos que se respete esa medida en todos los casos.
+
+    Para ello tenemos propiedades que limitan estas medidas:
+
+        min-width: Indica el ancho minimo que puede alcanzar un elemento.
+
+        max-width: Indica el ancho maximo que puede alcanzar un elemento.
+
+        min-height: Indica el alto minimo que puede alcanzar un elemento.
+
+        max-height: Indica el alto maximo que puede alcanzar un elemento.
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333;
+    color: lightcoral;
+}
+
+.title{
+    font-size: 3rem;
+}
+
+.link{
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 2rem;
+    background-color: lightcoral;
+    color: #333;
+    border-radius: 2em;
+    margin-bottom: 2rem;
+}
+
+.box1{
+    display: block;
+    position: relative;
+    margin: 1rem 2rem;
+    width: auto;
+    height: 15em;
+    background-color: cadetblue;
+}
+
+.box1-1{
+    margin: 0 5rem;
+    width: 50%;
+    height: 7rem;
+    background-color: purple;
+}
+
+.box1-2{
+    margin: 0 5rem;
+    width: auto;
+    height: 8rem;
+    background-color: sienna;
+}
+
+.box2{
+    display: block;
+    position: relative;
+    margin: 1rem 1rem;
+    width: auto;
+    height: 15em;
+    background-color: goldenrod;
+}
+
+.box2-1{
+    width: 100%;
+    height: 25%;
+    background-color: purple;
+}
+
+.box2-2{
+    margin: 0 10rem;
+    width: auto;
+    height: 75%;
+    background-color: sienna;
+}
+
+.box-especial{
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    z-index: -10;
+    background-color: #555;
+}
+
+.box3{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-color: lightcoral;
+}
+
+.box3-1{
+    width: 50vw;
+    height: 30vh;
+    background-color: greenyellow;
+}
+
+.box3-2{
+    margin: 0 10rem;
+    width: 30vw;
+    height: 20vh;
+    background-color: sienna;
+}
+
+.box4{
+    display: block;
+    position: relative;
+    width: 100vmin;
+    height: 100vmax;
+    background-color: lightskyblue;
+}
+
+.box4-1{
+    width: 100vmin;
+    height: 25vmax;
+    background-color: snow
+}
+
+.box4-2{
+    margin: 0 10rem;
+    width: auto;
+    height: 75vmin;
+    background-color: sienna;
+}
+
+.box5{
+    margin: 2em auto;
+    width: 20rem;
+    min-width: 10%;
+    max-width: 60%;
+    height: 50vh;
+    min-height: 30rem;
+    max-height: 30rem;
+    background-color: violet;
+}
