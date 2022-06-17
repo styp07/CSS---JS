@@ -1,6 +1,11 @@
 :root{
    --font-principal: 'Jockey One', sans-serif;
    --font-secundario: 'Poppins', sans-serif;
+   --color-principal: rgb(58, 56, 69);
+   --color-secundario: rgb(198, 155, 123);
+   --color-terciario: rgb(247, 204, 172);
+   --color-cuarto: rgb(130, 111, 102);
+   --color-quinto: rgb(238, 234, 232);
 }
 
 *{
@@ -11,6 +16,8 @@ body{
    margin: 0;
    padding: 0;
    font-family: var(--font-secundario);
+   background-color: var(--color-principal);
+   color: var(--color-quinto);
 }
 
 .header{
@@ -18,6 +25,7 @@ body{
    display: flex;
    align-items: center;
    justify-content: space-between;
+   border-bottom: .1rem solid var(--color-secundario);
 }
 
 .logo{
@@ -26,7 +34,12 @@ body{
 }
 
 .log{
+   color: var(--color-cuarto);
    font-size: 2.5em;
+}
+
+.log--sp{
+   color: var(--color-secundario);
 }
 
 .nav{
@@ -42,6 +55,16 @@ body{
 .nav__link{
    text-decoration: none;
    font-size: 1.2em;
+   color: var(--color-terciario);
+}
+
+.nav__link:hover{
+   color: var(--color-secundario);
+   transition: .5s;
+   -webkit-transition: .5s;
+   -moz-transition: .5s;
+   -ms-transition: .5s;
+   -o-transition: .5s;
 }
 
 
@@ -49,7 +72,7 @@ body{
 
 .main{
    width: 100%;
-   height: 115vh;
+   height: 145vh;
    display: flex;
    align-items: center;
 }
@@ -63,13 +86,19 @@ body{
 }
 
 .menu__title{
+   font-size: 3.5em;
    font-family: var(--font-principal);
+   color: var(--color-terciario);
 }
 
 .menu__text{
    display: block;
    position: absolute;
-   top: 70%;
+   top: 87%;
+}
+
+.menu__item{
+   margin: 0 2rem;   
 }
 
 .menu__body{
@@ -77,7 +106,8 @@ body{
 }
 
 .menu__content{
-   margin: 1rem 0;
+   margin: 0;
+   padding: 2.5rem;
    display: block;
 }
 
@@ -85,12 +115,15 @@ body{
    font-family: var(--font-principal);
    margin: 0;
    text-align: center;
+   font-size: 2.5em;
+   color: var(--color-terciario);
 }
 
 .menu__article{
    display: flex;
    justify-content: space-between;
    padding: 0 2rem;
+   border-bottom: .3rem dotted var(--color-secundario);
 }
 
 /* footer */
@@ -99,14 +132,16 @@ body{
    position: relative;
    display: flex;
    justify-content: space-around;
+   border-top: .1rem solid var(--color-secundario);
+   color: var(--color-terciario);
 }
 
 /* responsive */
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 900px) {
    .main{
       display: block;
-      height: 205vh;
+      height: 250vh;
    }
 
    .menu__header{
