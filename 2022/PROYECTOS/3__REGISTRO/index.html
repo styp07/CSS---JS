@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Formulario de registro</title>
   </head>
   <body>
     <section class="main">
-        <h1 class="title">Formulario de registro</h1>
-        <p class="text">Por favor llene este formulario con la información requerida</p>
-        <form action="https://register-demo.freecodecamp.org">
+      <h1 class="title">Formulario de registro</h1>
+      <p class="text">
+        Por favor llene este formulario con la información requerida
+      </p>
+      <form action="https://register-demo.freecodecamp.org" class="form">
+        <div class="set__principal">
+            <h2 class="subtitle subtitle--white">
+                Datos personales
+            </h2>
           <fieldset>
             <label
               >Ingresa tu nombre: <input type="text" name="first-name" required
             /></label>
             <label
-              >Ingresa tu apellido: <input type="text" name="last-name" required
+              >Ingresa tu apellido:
+              <input type="text" name="last-name" required
             /></label>
             <label
               >Ingresa tu email: <input type="email" name="email" required
@@ -31,12 +38,16 @@
                 required
             /></label>
           </fieldset>
+        </div>
+        <div class="set__secundario">
           <fieldset>
             <label
-              ><input type="radio" name="account-type" class="inline" /> Cuenta personal</label
+              ><input type="radio" name="account-type" class="inline" /> Cuenta
+              personal</label
             >
             <label
-              ><input type="radio" name="account-type" class="inline" /> Cuenta empresarial</label
+              ><input type="radio" name="account-type" class="inline" /> Cuenta
+              empresarial</label
             >
             <label>
               <input type="checkbox" name="terms" class="inline" required />
@@ -75,7 +86,8 @@
             </label>
           </fieldset>
           <input type="submit" value="Submit" />
-        </form>
+        </div>
+      </form>
     </section>
   </body>
 </html>
