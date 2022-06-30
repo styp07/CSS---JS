@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <section class="main">
+        <h1 class="title">Formulario de registro</h1>
+        <p class="text">Por favor llene este formulario con la información requerida</p>
+        <form action="https://register-demo.freecodecamp.org">
+          <fieldset>
+            <label
+              >Ingresa tu nombre: <input type="text" name="first-name" required
+            /></label>
+            <label
+              >Ingresa tu apellido: <input type="text" name="last-name" required
+            /></label>
+            <label
+              >Ingresa tu email: <input type="email" name="email" required
+            /></label>
+            <label
+              >Crea una contraseña:
+              <input
+                type="password"
+                name="password"
+                pattern="[a-z0-5]{8,}"
+                required
+            /></label>
+          </fieldset>
+          <fieldset>
+            <label
+              ><input type="radio" name="account-type" class="inline" /> Cuenta personal</label
+            >
+            <label
+              ><input type="radio" name="account-type" class="inline" /> Cuenta empresarial</label
+            >
+            <label>
+              <input type="checkbox" name="terms" class="inline" required />
+              Aceptar
+              <a href="https://www.freecodecamp.org/news/terms-of-service/"
+                >terminos y condiciones</a
+              >
+            </label>
+          </fieldset>
+          <fieldset>
+            <label
+              >Ingresa una imagen de perfil: <input type="file" name="file"
+            /></label>
+            <label
+              >Ingresa tu edad:
+              <input type="number" name="age" min="13" max="120" />
+            </label>
+            <label
+              >¿Cómo te enteraste de nosotros?
+              <select name="referrer">
+                <option value="">(Seleccione uno)</option>
+                <option value="1">Noticias</option>
+                <option value="2">YouTube</option>
+                <option value="3">Foros</option>
+                <option value="4">Otros</option>
+              </select>
+            </label>
+            <label
+              >Brindanos una biografía:
+              <textarea
+                name="bio"
+                rows="3"
+                cols="30"
+                placeholder="I like coding on the beach..."
+              ></textarea>
+            </label>
+          </fieldset>
+          <input type="submit" value="Submit" />
+        </form>
+    </section>
+  </body>
+</html>
