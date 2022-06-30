@@ -18,20 +18,21 @@
             <h2 class="subtitle subtitle--white">
                 Datos personales
             </h2>
-          <fieldset>
-            <label
-              >Ingresa tu nombre: <input type="text" name="first-name" required
-            /></label>
-            <label
+          <fieldset class="fieldset">
+            <label class="personal__label"
+              >Ingresa tu nombre: </label>
+              <input type="text" name="first-name" required class="personal__input"
+            />
+            <label class="personal__label"
               >Ingresa tu apellido:
-              <input type="text" name="last-name" required
+              <input type="text" name="last-name" required class="personal__input"
             /></label>
-            <label
-              >Ingresa tu email: <input type="email" name="email" required
+            <label class="personal__label"
+              >Ingresa tu email: <input type="email" name="email" required class="personal__input"
             /></label>
-            <label
+            <label class="personal__label"
               >Crea una contraseña:
-              <input
+              <input class="personal__input"
                 type="password"
                 name="password"
                 pattern="[a-z0-5]{8,}"
@@ -40,7 +41,10 @@
           </fieldset>
         </div>
         <div class="set__secundario">
-          <fieldset>
+            <h2 class="subtitle subtitle--orange">
+                Datos adicionales
+            </h2>
+          <fieldset class="fieldset">
             <label
               ><input type="radio" name="account-type" class="inline" /> Cuenta
               personal</label
@@ -57,7 +61,7 @@
               >
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset">
             <label
               >Ingresa una imagen de perfil: <input type="file" name="file"
             /></label>
