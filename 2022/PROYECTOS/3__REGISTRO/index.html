@@ -45,6 +45,34 @@
                 Datos adicionales
             </h2>
           <fieldset class="fieldset">
+            <label class="label__adition"
+              >Ingresa una imagen de perfil: <input type="file" name="file"
+            /></label>
+            <label class="label__adition"
+              >Ingresa tu edad:
+              <input type="number" name="age" min="13" max="120" />
+            </label>
+            <label class="label__adition"
+              >¿Cómo te enteraste de nosotros?
+              <select name="referrer">
+                <option value="">(Seleccione uno)</option>
+                <option value="1">Noticias</option>
+                <option value="2">YouTube</option>
+                <option value="3">Foros</option>
+                <option value="4">Otros</option>
+              </select>
+            </label>
+            <label class="label__adition"
+              >Brindanos una biografía:
+              <textarea class="texttarea"
+                name="bio"
+                rows="3"
+                cols="30"
+                placeholder="I like coding on the beach..."
+              ></textarea>
+            </label>
+          </fieldset>
+          <fieldset class="fieldset label__adition" >
             <label
               ><input type="radio" name="account-type" class="inline" /> Cuenta
               personal</label
@@ -61,35 +89,7 @@
               >
             </label>
           </fieldset>
-          <fieldset class="fieldset">
-            <label
-              >Ingresa una imagen de perfil: <input type="file" name="file"
-            /></label>
-            <label
-              >Ingresa tu edad:
-              <input type="number" name="age" min="13" max="120" />
-            </label>
-            <label
-              >¿Cómo te enteraste de nosotros?
-              <select name="referrer">
-                <option value="">(Seleccione uno)</option>
-                <option value="1">Noticias</option>
-                <option value="2">YouTube</option>
-                <option value="3">Foros</option>
-                <option value="4">Otros</option>
-              </select>
-            </label>
-            <label
-              >Brindanos una biografía:
-              <textarea
-                name="bio"
-                rows="3"
-                cols="30"
-                placeholder="I like coding on the beach..."
-              ></textarea>
-            </label>
-          </fieldset>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="button"/>
         </div>
       </form>
     </section>
