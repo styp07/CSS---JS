@@ -28,6 +28,7 @@ body{
     align-items: center;
     height: 100vh;
 }
+
 .img{
     width: 25rem;
     height: 30rem;
@@ -167,4 +168,26 @@ body{
     100%{
         background-position-x: 1500px;
     }
+}
+
+@media (max-width: 900px) {
+    .main{
+        height: 200vh;
+    }
+
+    .cont{
+        display: block;
+    }
+
+    .img__cont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .form{
+        margin: 0 auto;
+    }
+
 }
