@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(221, 221, 221);
+    margin: 0;
+    margin: 1em;
+}
+
+.gallery{
+    columns: 4 320px;
+    column-gap: .5em;
+}
+
+.img{
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: .5em;
+    object-fit: cover;
+}
